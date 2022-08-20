@@ -1,0 +1,28 @@
+# Filename: my.kv
+
+<MyGrid>:
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Texto: "
+
+            TextInput:
+                multinline:False
+                id: texto1
+                text: "..."
+
+            Label:
+                text: "Email: "
+
+            TextInput:
+                multiline:False
+
+        Button:
+            text:"Mostrar texto"
+            id: boton1
+            on_press: root.mostrar()
